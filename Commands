@@ -1,0 +1,83 @@
+Collect wtmp & btmp files from /var/log directory
+
+last -f wtmp
+list all the users logged in to the machine
+last -f btmp
+list all the failed logged in attempts to the machine
+
+Last Modified /Accessed/created  Files
+find / -type f -mtime -<Number of days>  -printf "%AY%Am%Ad%AH%AM%AS %h/%f\n"
+find / -type f -atime -<Number of days> -printf "%AY%Am%Ad%AH%AM%AS %h/%f\n"
+find / -type f -ctime -<Number of days>  -printf "%AY%Am%Ad%AH%AM%AS %h/%f\n"
+
+List all executables in the machine 
+find / -type f -exec file -p '{}' \; | grep ELF
+
+To find hidden directory
+find / -type d -name ".*"
+
+list all installed packages with date
+rpm -qa --last
+
+Persistance Path:
+/etc/rc.local, /etc/initd, /etc/rc*.d, /etc/modules, /etc/
+cron*, /var/spool/cron/*
+
+Live Analysis :
+
+List all running pprocess
+ps -aux
+
+This list all the open handles of a specific Process
+lsof -p <PID>
+
+List the executable path of the running process
+ls -la /proc/<PID>/exe
+
+Deleted binaries , but process still running
+ls -alR /proc/*/exe 2> /dev/null | grep deleted
+
+list process current working directory
+ ls -alR /proc/*/cwd | grep dev 
+ ls -alR /proc/*/cwd | grep tmp
+
+process running for a unlinked files
+lsof -a +L1
+
+List all the commands executed with date
+export HISTTIMEFORMAT='%F %T'
+History
+
+List all history files for users
+find / -name .*history
+
+To know if usb devices are connected
+dmesg 
+
+To list all the task lists
+crontab -l 
+
+To list the recently open files from GUI
+recently-used.xbel
+
+List all the login timing of the users
+lastlog
+
+Look for Suspicious commands
+
+chmod +x *
+chmod 777 *
+iptables*
+python -m SimpleHTTPServer
+wget * htp*
+nc
+python * import pty; pty.spawn
+import pty; pty.spawn
+xterm -display
+exec 5<>/dev/tcp
+bash -i >& /dev/tcp
+chmod +s /tmp/
+service iptables stop
+chmod +s 
+useradd
+
