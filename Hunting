@@ -27,7 +27,7 @@ Persistance Path:
 /etc/rc.local, /etc/initd, /etc/rc*.d, /etc/modules, /etc/
 cron*, /var/spool/cron/*
 
-List all running pprocess
+List all running process
 ps -aux
 
 This list all the open handles of a specific Process
