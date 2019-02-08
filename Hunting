@@ -2,6 +2,7 @@ Collect wtmp & btmp files from /var/log directory
 
 last -f wtmp
 list all the users logged in to the machine
+
 last -f btmp
 list all the failed logged in attempts to the machine
 
@@ -22,8 +23,6 @@ rpm -qa --last
 Persistance Path:
 /etc/rc.local, /etc/initd, /etc/rc*.d, /etc/modules, /etc/
 cron*, /var/spool/cron/*
-
-Live Analysis :
 
 List all running pprocess
 ps -aux
