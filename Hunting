@@ -6,6 +6,9 @@ list all the users logged in to the machine
 last -f btmp
 list all the failed logged in attempts to the machine
 
+Look for UID/GID 0
+grep ":0:0" /etc/passwd
+
 Last Modified /Accessed/created  Files
 find / -type f -mtime -<Number of days>  -printf "%AY%Am%Ad%AH%AM%AS %h/%f\n"
 find / -type f -atime -<Number of days> -printf "%AY%Am%Ad%AH%AM%AS %h/%f\n"
