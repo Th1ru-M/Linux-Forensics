@@ -37,7 +37,7 @@ List the executable path of the running process
 ls -la /proc/<PID>/exe
 
 Deleted binaries , but process still running
-ls -alR /proc/*/exe 2> /dev/null | grep deleted
+ls -alR /proc/*/exe | grep deleted
 
 list process current working directory
  ls -alR /proc/*/cwd | grep dev 
