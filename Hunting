@@ -71,12 +71,12 @@ chmod +x *
 chmod 777 *
 iptables*
 python -m SimpleHTTPServer
-wget * htp*
+wget * http*
 nc
 python * import pty; pty.spawn
 import pty; pty.spawn
 xterm -display
-exec 5<>/dev/tcp
+exec * /dev/tcp
 bash -i >& /dev/tcp
 chmod +s /tmp/
 service iptables stop
