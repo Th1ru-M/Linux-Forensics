@@ -82,4 +82,5 @@ chmod +s /tmp/
 service iptables stop
 chmod +s 
 useradd
+histfilesize=0
 
