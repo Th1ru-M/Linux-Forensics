@@ -88,6 +88,8 @@ HISTCONTROL=ignoredups
 HISTCONTROL=erasedups
 HISTCONTROL=ignoreboth
 HISTIGNORE
+socat TCP
+socat UDP
 
 
 
