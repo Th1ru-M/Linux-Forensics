@@ -83,4 +83,10 @@ service iptables stop
 chmod +s 
 useradd
 histfilesize=0
+HISTCONTROL=ignorespace
+HISTCONTROL=ignoredups
+HISTCONTROL=erasedups
+HISTCONTROL=ignoreboth
+
+
 
