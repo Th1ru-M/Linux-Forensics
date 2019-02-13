@@ -87,6 +87,8 @@ HISTCONTROL=ignorespace
 HISTCONTROL=ignoredups
 HISTCONTROL=erasedups
 HISTCONTROL=ignoreboth
+HISTIGNORE
+
 
 
 
